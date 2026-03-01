@@ -25,7 +25,10 @@ connectDB();
 // =========================================
 app.use(
   cors({
-    origin: "http://localhost:5173", // ✅ Your React frontend (Vite)
+    origin: [
+      "http://localhost:5173",
+      "https://ceps-frontend.onrender.com"
+    ],
     credentials: true,
   })
 );
